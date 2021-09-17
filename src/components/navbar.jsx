@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Counters from './counters';
-import Test from './test';
+//import Counters from './counters';
+//import Test from './test';
 
 
 class Navbar extends React.Component {
@@ -15,8 +15,8 @@ class Navbar extends React.Component {
                         </button>
                     </div>
                 </nav>
-                <Counters />
-                <Test />
+                {/* <Counters />
+                <Test /> */}
             </React.Fragment>
         );
     }
