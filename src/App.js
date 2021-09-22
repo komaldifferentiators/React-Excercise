@@ -8,7 +8,7 @@ import Movies from './components/movies';
 function App() {
   return (
     <div>
-        <NavBar />,
+        <NavBar />
         <Movies />
     </div>
     

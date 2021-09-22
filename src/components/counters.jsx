@@ -15,12 +15,30 @@ class Counters extends Component {
         this.setState({ counters });
     };
 
+    handleIncrement = counter => {
+        const counters = [...this.state.counters];
+        const index = counters.indexOf(counter);
+        counters[index] = { ...counter };
+        counters[index].value++;
+        this.setState({ counters });
+    };
+
+    handleDecrement = counter => {
+        const counters = [...this.state.counters];
+        const index = counters.indexOf(counter);
+        counters[index] = { ...counter };
+        counters[index].value--;
+        this.setState({ counters });
+    };
+
     render() { 
         return ( <div>
             { this.state.counters.map(counter => (
             <Counter 
                 key={counter.id} 
                 onDelete={this.handleDelete}
+                onIncrement={this.handleIncrement}
+                onDecrement={this.handleDecrement}
                 //value={counter.value}
                 //id={counter.id} 
                 // we can pass value and id one by one but passing object is best way to use.below we are passing counter object
